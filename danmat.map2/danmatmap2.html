@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>단맛지도</title>
+  <meta name="author" content="32220235권나희" />
+  <meta name="description" content="단국대 맛집 지도 서비스" />
+  <link rel="stylesheet" href="style2.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Jua&family=Nanum+Gothic&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <div class="inner">
+      <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center;">
+        <h1 class="title">단맛지도</h1>
+        <nav style="position: fixed; top: 10px; right: 10px; z-index: 1000;">
+          <br>
+          <a href="mailto:alsrl030902@naver.com">
+            <img src="image/email.png" alt="이메일 보내기" style="width:30px; cursor:pointer; margin-right: 20px;">
+          </a>
+        </nav>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="category">
+      <div class="inner">
+        <div class="category-container">
+          <img src="image/category.png" alt="카테고리 열기" class="category-toggle" onclick="toggleCategory()">
+          <div id="category-list">
+            <button class="category-button">혼밥하기 좋은 음식점</button>
+            <button class="category-button">단체 식사 가능 음식점</button>
+            <button class="category-button">가성비 음식점</button>
+            <button class="category-button">주류 가능 음식점</button>
+            <button class="category-button">주말 오픈 음식점</button>
+            <button class="category-button">단체 예약 가능</button>
+            <button class="category-button">카공하기 좋은 카페</button>
+            <button class="category-button">팀플, 회의하기 좋은 카페</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="map" style="width:500px;height:400px;"></div>
+  </main>
+
+
+  <script>
+
+    function toggleCategory() {
+      const list = document.getElementById('category-list');
+      list.classList.toggle('active');
+    }
+  </script>
+
+  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=e3b725c8492ae83d6e7371054a79e634"></script>
+  <script src="script.js"></script>
+
+
+
+ 
+
+</body>
+</html>
