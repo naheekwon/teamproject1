@@ -1,7 +1,16 @@
-var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
-var options = { //지도를 생성할 때 필요한 기본 옵션
-	center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
-	level: 3 //지도의 레벨(확대, 축소 정도)
-};
+window.onload = function () {
+  const container = document.getElementById('map');
+  const options = {
+    center: new kakao.maps.LatLng(37.321877, 127.126899), // 단국대 죽전캠퍼스
+    level: 3
+  };
 
-var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+  const map = new kakao.maps.Map(container, options);
+
+  // 단국대 주변 범위 제한 (선택)
+  const bounds = new kakao.maps.LatLngBounds(
+    new kakao.maps.LatLng(37.318, 127.122), // 남서
+    new kakao.maps.LatLng(37.325, 127.131)  // 북동
+  );
+  map.setBounds(bounds);
+};
