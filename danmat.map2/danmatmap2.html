@@ -9,16 +9,18 @@
   <meta name="description" content="단국대 맛집 지도 서비스" />
   <link rel="stylesheet" href="style2.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Jua&family=Nanum+Gothic&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Orbit&display=swap" rel="stylesheet">
 </head>
+
+
 
 <body>
   <nav>
     <div class="inner">
       <div class="nav-container" style="display: flex<h1 ; justify-content: space-between; align-items: center;">
         
-        <h1 class="title"> <img src="image/fork.png" alt="로고" style="width: 28px;" class="title-icon">
+        <h1 class="title"> <img src="image/fork.png" alt="로고" style="width: 30px;" class="title-icon">
   단맛지도
 </h1>
 
@@ -38,17 +40,39 @@
         <div class="category-container">
           <br>
           <img src="image/category.png" alt="카테고리 열기" class="category-toggle" onclick="toggleCategory()">
-          <div id="category-list">
-            <br>
-            <button class="category-button">혼밥하기 좋은 음식점</button>
-            <button class="category-button">단체 식사 가능 음식점</button>
-            <button class="category-button">가성비 음식점</button>
-            <button class="category-button">주류 가능 음식점</button>
-            <button class="category-button">주말 오픈 음식점</button>
-            <button class="category-button">단체 예약 가능</button>
-            <button class="category-button">카공하기 좋은 카페</button>
-            <button class="category-button">팀플, 회의하기 좋은 카페</button>
-          </div>
+  <div id="category-list">
+  <br>
+  <button class="category-button" onclick="toggleSub('restaurant-sub')"> 음식점 ▾</button>
+  <div id="restaurant-sub" class="subcategory" style="display: none;">
+    <button class="category-button" onclick="toggleSub('foodtype-sub')">음식 종류 ▾</button>
+    <div id="foodtype-sub" class="subcategory" style="display: none;">
+      <button class="category-button">한식</button>
+      <button class="category-button">중식</button>
+      <button class="category-button">일식</button>
+      <button class="category-button">양식</button>
+      <button class="category-button">아시안</button>
+      <button class="category-button">기타</button>
+    </div>
+    <button class="category-button">혼밥하기 좋은</button>
+    <button class="category-button">늦은 저녁 식사 가능</button>
+    <button class="category-button">이른 아침 식사 가능</button>
+    <button class="category-button">단체 식사 가능</button>
+    <button class="category-button">단체 포장/예약 가능</button>
+    <button class="category-button">가성비 좋은</button>
+    <button class="category-button">주류도 판매하는</button>
+    <button class="category-button">토요일 영업하는</button>
+    <button class="category-button">일요일 영업하는</button>
+  </div>
+
+  <button class="category-button" onclick="toggleSub('cafe-sub')"> 카페 ▾</button>
+  <div id="cafe-sub" class="subcategory" style="display: none;">
+    <button class="category-button">카공하기 좋은</button>
+    <button class="category-button">팀플하기 좋은</button>
+    <button class="category-button">단체 모임하기 좋은</button>
+  </div>
+</div>
+
+
         </div>
       </div>
     </section>
@@ -57,13 +81,22 @@
   </main>
 
 
-  <script>
+ <script>
+  function toggleCategory() {
+    const list = document.getElementById('category-list');
+    list.classList.toggle('active');
+  }
 
-    function toggleCategory() {
-      const list = document.getElementById('category-list');
-      list.classList.toggle('active');
+  function toggleSub(id) {
+    const sub = document.getElementById(id);
+    if (sub.style.display === 'none') {
+      sub.style.display = 'block';
+    } else {
+      sub.style.display = 'none';
     }
-  </script>
+  }
+</script>
+
 
   <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=73a23e77bdb6f562d1f1ad7b78f87a6c"></script>
   <script src="script.js"></script>
