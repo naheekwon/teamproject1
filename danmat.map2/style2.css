@@ -75,6 +75,40 @@ header {
 
 .contact {
   display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* 언어 선택기 스타일 */
+.language-selector {
+  display: flex;
+  gap: 5px;
+  border-radius: var(--border-radius);
+  background-color: var(--dark-bg);
+  padding: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.lang-btn {
+  border: none;
+  background: none;
+  font-size: 12px;
+  font-family: "Orbit", sans-serif;
+  padding: 4px 8px;
+  border-radius: 15px;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: all 0.2s ease;
+}
+
+.lang-btn:hover {
+  background-color: rgba(255, 138, 101, 0.1);
+}
+
+.lang-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
 }
 
 .email-icon {
@@ -330,6 +364,10 @@ header {
   #map {
     height: calc(100vh - 150px);
   }
+  
+  .language-selector {
+    margin-right: 5px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -349,6 +387,16 @@ header {
   
   #map {
     height: calc(100vh - 180px);
+  }
+  
+  .language-selector {
+    padding: 2px;
+    gap: 2px;
+  }
+  
+  .lang-btn {
+    padding: 3px 6px;
+    font-size: 11px;
   }
 }
 
