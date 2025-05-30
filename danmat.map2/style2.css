@@ -5,6 +5,19 @@
   font-style: normal;
 }
 
+:root {
+  --primary-color: #ff8a65;
+  --secondary-color: #ffccbc;
+  --accent-color: #ff5722;
+  --text-color: #424242;
+  --light-bg: #fff9f5;
+  --dark-bg: #f5f5f5;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --border-radius: 20px;
+  --tag-bg: #ff8a65;
+  --tag-color: white;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -18,188 +31,259 @@ html {
 
 body {
   overflow-x: hidden;
+  background-color: var(--light-bg);
+  color: var(--text-color);
 }
 
-.title {
-  font-size: 40px;
-  margin-left: 20px;
-  margin-top: 20px;
-  font-family: "Black Han Sans", sans-serif;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.nav-container {
+/* 헤더 스타일 */
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 15px 20px;
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow);
+  position: relative;
+  z-index: 10;
 }
 
-/* 카테고리 섹션 */
-#category-section {
-  padding: 20px;
-}
-
-/* 카테고리 컨테이너 */
-.category-container {
+.logo {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 1200px;
-  margin: 0 auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.title {
+  font-size: 28px;
+  font-family: "Black Han Sans", sans-serif;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.search-area {
+  flex: 1;
+  max-width: 400px;
+  margin: 0 20px;
+}
+
+.contact {
+  display: flex;
+}
+
+.email-icon {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.email-icon:hover {
+  transform: scale(1.1);
+}
+
+/* 필터 영역 */
+.filter-area {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .filter-title {
-  font-size: 18px;
+  font-size: 16px;
+  margin: 0;
+  margin-right: 10px;
+  white-space: nowrap;
+  color: var(--primary-color);
   font-family: "Orbit", cursive;
-  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.tags-container {
+  flex: 1;
+  overflow-x: auto;
+  /* 스크롤바 숨기기 */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.tags-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* 검색 박스 */
+.search-box {
+  width: 100%;
+  position: relative;
+}
+
+/* AutoComplete 검색 입력 필드 */
+#autoComplete {
+  width: 100%;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 14px;
+  font-family: "Orbit", sans-serif;
+  border: 2px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  background-color: var(--light-bg);
+}
+
+#autoComplete:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 3px 8px rgba(255, 138, 101, 0.2);
+}
+
+/* AutoComplete 결과 목록 스타일 */
+.autoComplete_wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.autoComplete_wrapper > ul {
+  position: absolute;
+  max-height: 226px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  left: 0;
+  right: 0;
+  margin: 5px 0;
+  padding: 8px 0;
+  z-index: 1000;
+  list-style: none;
+  border-radius: var(--border-radius);
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow);
+}
+
+.autoComplete_wrapper > ul > li {
+  padding: 8px 15px;
+  font-size: 14px;
+  color: var(--text-color);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease;
+  font-family: "Orbit", sans-serif;
+}
+
+.autoComplete_wrapper > ul > li:last-child {
+  border-bottom: none;
+}
+
+.autoComplete_wrapper > ul > li:hover {
+  background-color: rgba(255, 138, 101, 0.1);
+  cursor: pointer;
+}
+
+.autoComplete_wrapper > ul > li[aria-selected="true"] {
+  background-color: rgba(255, 138, 101, 0.1);
+}
+
+.autoComplete_wrapper > ul > li mark {
+  background-color: transparent;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.no_result {
+  padding: 8px 15px;
+  font-size: 14px;
+  color: #888;
+  font-family: "Orbit", sans-serif;
 }
 
 /* Tagify 태그 입력 필드 */
 .tags-input {
   width: 100%;
-  max-width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
-  font-family: "Orbit", cursive;
+  padding: 8px 12px;
+  border: 2px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  font-family: "Orbit", sans-serif;
+  background-color: var(--light-bg);
 }
 
 /* Tagify 태그 스타일 커스터마이징 */
 .tagify {
   width: 100%;
-  max-width: 100%;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
-  font-family: "Orbit", cursive;
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  font-family: "Orbit", sans-serif;
 }
 
 .tagify__tag {
-  background: #4caf50;
-  color: white;
-  border-radius: 3px;
+  background: var(--tag-bg);
+  color: var(--tag-color);
+  border-radius: 15px;
+  padding-right: 5px;
 }
 
 .tagify__tag__removeBtn {
   color: white;
+  opacity: 0.7;
+}
+
+.tagify__tag__removeBtn:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .tagify__tag:hover {
-  background: #3e8e41;
+  background: var(--accent-color);
 }
 
 .tagify__dropdown {
-  font-family: "Orbit", cursive;
+  font-family: "Orbit", sans-serif;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
 }
 
 .tagify__dropdown__item {
-  padding: 10px;
-  border-bottom: 1px solid #eee;
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+  color: var(--text-color);
 }
 
 .tagify__dropdown__item--active {
-  background: #f1f1f1;
-}
-
-/* 카테고리 버튼 컨테이너 */
-.category-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-left: 20px;
-}
-
-/* 카테고리 토글 이미지 */
-.category-toggle {
-  cursor: pointer;
-  margin-left: 20px;
-  width: 33px;
-  height: 33px;
-}
-
-/* 카테고리 이미지 (restaurant, cafe) */
-.category-image {
-  width: 70px;
-  cursor: pointer;
-  margin-bottom: 10px;
-}
-
-/* 카테고리 목록 */
-#category-list {
-  display: none;
-  flex-direction: column;
-  gap: 10px;
-  background: none;
-  border: none;
-  width: 150px;
-  position: absolute;
-  left: 0;
-  top: 50px;
-  margin-left: 20px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease, top 0.3s ease;
-  font-family: "Orbit", cursive !important;
-  font-weight: 400;
-}
-
-#category-list.active {
-  display: flex;
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* 공통 버튼 스타일 */
-.category-button {
-  background-color: transparent;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 14px;
-  width: auto;
-  margin-bottom: 8px;
-  padding-left: 10px;
-  font-family: "Orbit", cursive !important;
-  font-weight: 400;
-}
-
-/* 상위 카테고리 여백 */
-#category-list > .category-button {
-  margin-left: 5px;
-}
-
-/* hover 효과 */
-.category-button:hover {
-  background-color: #e0e0e0;
+  background: rgba(255, 138, 101, 0.1);
 }
 
 /* 카카오 맵 */
 #map {
   width: 100%;
-  height: 80vh; /* 화면의 80% 높이로 설정 */
-  border: 1px solid #ccc;
+  height: calc(100vh - 120px); /* 헤더와 필터 영역을 제외한 높이 */
+  border: none;
   margin: 0 auto;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 /* 인포윈도우 스타일 */
 .info-window {
-  padding: 10px;
-  width: 200px;
-  font-family: "Orbit", cursive;
+  padding: 12px;
+  width: 220px;
+  font-family: "Orbit", "Gaegu", sans-serif;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: var(--shadow);
 }
 
 .info-window h3 {
   margin-bottom: 10px;
   font-size: 16px;
-  color: #333;
+  color: var(--primary-color);
+  font-weight: 700;
 }
 
 .info-window .tags {
@@ -209,21 +293,62 @@ body {
 }
 
 .info-window .tag {
-  background: #4caf50;
+  background: var(--tag-bg);
   color: white;
   font-size: 12px;
-  padding: 2px 6px;
-  border-radius: 3px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  display: inline-block;
 }
 
 /* 반응형 스타일 */
 @media screen and (max-width: 768px) {
-  #map {
-    height: 70vh;
+  header {
+    flex-wrap: wrap;
+    padding: 10px 15px;
+  }
+  
+  .search-area {
+    order: 3;
+    max-width: 100%;
+    margin: 10px 0 0;
+    width: 100%;
+  }
+  
+  .logo {
+    order: 1;
+  }
+  
+  .contact {
+    order: 2;
   }
   
   .title {
-    font-size: 30px;
+    font-size: 24px;
+  }
+  
+  #map {
+    height: calc(100vh - 150px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .filter-area {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 15px;
+  }
+  
+  .filter-title {
+    margin-bottom: 5px;
+  }
+  
+  .tags-container {
+    width: 100%;
+  }
+  
+  #map {
+    height: calc(100vh - 180px);
   }
 }
 
