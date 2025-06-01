@@ -264,3 +264,129 @@ let tagify;
 let autoCompleteJS;
 let selectedTags = []; // 선택된 태그 저장 배열
 let currentCategory = 'restaurant'; // 현재 선택된 카테고리 (기본값: 음식점)
+
+window.onload = function () {
+  // 서버에서 식당 데이터 가져오기
+  fetchRestaurantData();
+  // 다른 초기화 함수들은 fetchRestaurantData 내부에서 호출됩니다.
+};
+
+// 서버에서 식당 데이터 가져오기
+async function fetchRestaurantData() {
+  try {
+    // 로딩 애니메이션 표시
+    showLoading();
+    
+    const response = await fetch('http://localhost:8080/restaurants');
+    const data = await response.json();
+    
+    // 모든 주소를 좌표로 변환하는 Promise 배열 생성
+    const geocodePromises = data.map((restaurant) => {
+      return new Promise((resolve) => {
+        if (!restaurant.address || restaurant.address.trim() === '') {
+          // 주소가 없는 경우 기본 좌표 사용
+          console.warn(`주소 정보 없음: ${restaurant.title}`);
+          resolve({
+            ...restaurant,
+            latitude: "37.321877",
+            longitude: "127.126899"
+          });
+          return;
+        }
+        
+        // REST API로 주소 검색
+        geocodeAddress(restaurant.address)
+          .then(result => {
+            if (result) {
+              resolve({
+                ...restaurant,
+                latitude: result.y,
+                longitude: result.x
+              });
+            } else {
+              // 좌표 변환 실패 시 기본 좌표 사용
+              console.warn(`주소 변환 실패: ${restaurant.address}`);
+              resolve({
+                ...restaurant,
+                latitude: "37.321877",
+                longitude: "127.126899"
+              });
+            }
+          })
+          .catch(error => {
+            console.error(`주소 변환 중 오류: ${restaurant.address}`, error);
+            resolve({
+              ...restaurant,
+              latitude: "37.321877",
+              longitude: "127.126899"
+            });
+          });
+      });
+    });
+    
+    // 모든 주소 변환이 완료될 때까지 기다림
+    const geocodedData = await Promise.all(geocodePromises);
+    
+    // 받아온 데이터를 마커 표시에 적합한 형태로 변환
+    restaurantData = geocodedData.map(restaurant => {
+      // 서버에서 받은 카테고리 값을 영문 카테고리로 매핑
+      let category = 'restaurant'; // 기본값
+      
+      // restaurant.category 값에 따라 적절한 영문 카테고리 설정
+      if (restaurant.category) {
+        switch(restaurant.category) {
+          case '음식점':
+            category = 'restaurant';
+            break;
+          case '카페':
+            category = 'cafe';
+            break;
+          case '주점':
+            category = 'bar';
+            break;
+          case '기타':
+            category = 'other';
+            break;
+          default:
+            category = 'restaurant';
+        }
+      }
+      
+      return {
+        id: restaurant.id,
+        name: restaurant.title,
+        position: new kakao.maps.LatLng(parseFloat(restaurant.latitude), parseFloat(restaurant.longitude)),
+        tags: restaurant.tags,
+        category: category,
+        menu: restaurant.menu,
+        address: restaurant.address,
+        imageUrl: restaurant.imageUrl,
+        status: restaurant.status,
+        // 다국어 번역 필드 추가
+        titleEn: restaurant.titleEn,
+        titleJa: restaurant.titleJa, 
+        titleZh: restaurant.titleZh,
+        menuEn: restaurant.menuEn,
+        menuJa: restaurant.menuJa,
+        menuZh: restaurant.menuZh
+      };
+    });
+    
+    console.log('변환된 식당 데이터:', restaurantData);
+    
+    // 데이터를 가져온 후 지도 초기화 및 기타 초기화 작업 수행
+    initMap();
+    initTagify();
+    initAutoComplete();
+    initLanguageSelector();
+    initCategoryMenu();
+    initButtonEvents();
+    
+    // 로딩 애니메이션 숨기기
+    hideLoading();
+  } catch (error) {
+    console.error('데이터를 가져오는 중 오류 발생:', error);
+    alert('서버에서 데이터를 가져오는데 실패했습니다.');
+    hideLoading();
+  }
+}
