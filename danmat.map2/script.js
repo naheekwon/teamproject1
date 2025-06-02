@@ -46,6 +46,32 @@ const translations = {
     '카테고리 필터:': 'Category Filter:',
     '태그 선택': 'Select tags',
     '검색 결과가 없습니다': 'No search results',
+    '카테고리 메뉴': 'Category Menu',
+    '오늘의 추천 맛집': 'Today\'s Recommended Restaurant',
+    '다른 가게 추천받기': 'Get Another Recommendation',
+    
+    // 카테고리 메뉴
+    '음식점': 'Restaurants',
+    '카페': 'Cafes',
+    '주점': 'Bars',
+    '전체보기': 'View All',
+    '랜덤추천': 'Random',
+    '태그 필터': 'Tag Filters',
+    '태그로 찾기': 'Find by Tags',
+    '식당': 'Restaurants',
+    '식당 종류': 'Restaurant Types',
+    '특징': 'Features',
+    '음식 종류': 'Food Types',
+    '가격대': 'Price Range',
+    '편의시설': 'Amenities',
+    '기타 필터': 'Other Filters',
+    '좌석 타입': 'Seating Types',
+    '모두 보기': 'Show All',
+    '영업 시간': 'Business Hours',
+    '다른 추천': 'Try Another',
+    '랜덤 추천': 'Random Recommendation',
+    '닫기': 'Close',
+    '가게 추천': 'Recommend',
     
     // 태그 번역
     '한식': 'Korean Food',
@@ -67,6 +93,8 @@ const translations = {
     '카공하기 좋은': 'Good for Study',
     '팀플하기 좋은': 'Good for Team Projects',
     '단체 모임하기 좋은': 'Good for Group Meetings',
+    '안주가 맛있는': 'Good Snacks',
+    '분식': 'Korean Snacks',
     
     // 식당 이름
     '맛있는 한식당': 'Delicious Korean Restaurant',
@@ -84,6 +112,32 @@ const translations = {
     '카테고리 필터:': 'カテゴリフィルター:',
     '태그 선택': 'タグを選択',
     '검색 결과가 없습니다': '検索結果がありません',
+    '카테고리 메뉴': 'カテゴリメニュー',
+    '오늘のおすすめレストラン': '今日のおすすめレストラン',
+    '別のお店を推薦': '別のお店を推薦',
+    
+    // 카테고리 메뉴
+    '음식점': 'レストラン',
+    '카페': 'カフェ',
+    '주점': '居酒屋',
+    '전체보기': '全て見る',
+    '랜덤추천': 'ランダム',
+    '태그 필터': 'タグフィルター',
+    '태그로 찾기': 'タグで検索',
+    '식당': 'レストラン',
+    '식당 종류': 'レストランの種類',
+    '특징': '特徴',
+    '음식 종류': '料理の種類',
+    '가격대': '価格帯',
+    '편의시설': '施設',
+    '기타 필터': 'その他のフィルター',
+    '좌석 타입': '座席タイプ',
+    '모두 보기': '全て表示',
+    '영업 시간': '営業時間',
+    '다른 추천': '別のおすすめ',
+    'ランダムおすすめ': 'ランダムおすすめ',
+    '閉じる': '閉じる',
+    'おすすめ': 'おすすめ',
     
     // 태그 번역
     '한식': '韓国料理',
@@ -94,24 +148,26 @@ const translations = {
     '기타': 'その他',
     '카페': 'カフェ',
     '혼밥하기 좋은': '一人で食べるのに良い',
-    '늦은 저녁 식사 가능': '遅い夕食可能',
-    '이른 아침 식사 가능': '早朝食事可能',
-    '단체 식사 가능': '団体食事可能',
-    '단체 포장/예약 가능': '団体テイクアウト/予約可能',
-    '가성비 좋은': 'コスパが良い',
-    '주류도 판매하는': 'お酒も販売',
-    '토요일 영업하는': '土曜営業',
-    '일요일 영업하는': '日曜営業',
-    '카공하기 좋은': '勉強に良い',
-    '팀플하기 좋은': 'チームプロジェクトに良い',
-    '단체 모임하기 좋은': '団体会合に良い',
+    '遅い夕食可能': '遅い夕食可能',
+    '早朝食事可能': '早朝食事可能',
+    '団体食事可能': '団体食事可能',
+    '団体テイクアウト/予約可能': '団体テイクアウト/予約可能',
+    'コスパが良い': 'コスパが良い',
+    'お酒も販売': 'お酒も販売',
+    '土曜営業': '土曜営業',
+    '日曜営業': '日曜営業',
+    '勉強に良い': '勉強に良い',
+    'チームプロジェクトに良い': 'チームプロジェクトに良い',
+    '団体会合に良い': '団体会合に良い',
+    '美味しいおつまみ': '美味しいおつまみ',
+    '韓国ファストフード': '韓国ファストフード',
     
     // 식당 이름
-    '맛있는 한식당': '美味しい韓国料理店',
-    '카페 단맛': 'カフェ甘味',
-    '중화요리집': '中華料理店',
-    '스시 명가': '寿司の名店',
-    '카페 공부': '勉強カフェ'
+    '美味しい韓国料理店': '美味しい韓国料理店',
+    'カフェ甘味': 'カフェ甘味',
+    '中華料理店': '中華料理店',
+    '寿司の名店': '寿司の名店',
+    '勉強カフェ': '勉強カフェ'
   },
   
   // 중국어 번역
@@ -122,34 +178,62 @@ const translations = {
     '카테고리 필터:': '类别筛选:',
     '태그 선택': '选择标签',
     '검색 결과가 없습니다': '没有搜索结果',
+    '类别菜单': '类别菜单',
+    '今日推荐餐厅': '今日推荐餐厅',
+    '获取另一个推荐': '获取另一个推荐',
+    
+    // 카테고리 메뉴
+    '음식점': '餐厅',
+    '카페': '咖啡厅',
+    '주점': '酒吧',
+    '전체보기': '查看全部',
+    '随机推荐': '随机推荐',
+    '标签筛选': '标签筛选',
+    '按标签查找': '按标签查找',
+    '餐厅': '餐厅',
+    '餐厅类型': '餐厅类型',
+    '特点': '特点',
+    '食物类型': '食物类型',
+    '价格范围': '价格范围',
+    '设施': '设施',
+    '其他筛选': '其他筛选',
+    '座位类型': '座位类型',
+    '显示全部': '显示全部',
+    '营业时间': '营业时间',
+    '换一个推荐': '换一个推荐',
+    '随机推荐': '随机推荐',
+    '关闭': '关闭',
+    '推荐': '推荐',
     
     // 태그 번역
-    '한식': '韩国料理',
-    '중식': '中国料理',
-    '일식': '日本料理',
-    '양식': '西餐',
-    '아시안': '亚洲料理',
-    '기타': '其他',
-    '카페': '咖啡厅',
-    '혼밥하기 좋은': '适合独自用餐',
-    '늦은 저녁 식사 가능': '可晚餐',
-    '이른 아침 식사 가능': '可早餐',
-    '단체 식사 가능': '可团体用餐',
-    '단체 포장/예약 가능': '可团体打包/预约',
-    '가성비 좋은': '性价比高',
-    '주류도 판매하는': '提供酒类',
-    '토요일 영업하는': '周六营业',
-    '일요일 영업하는': '周日营业',
-    '카공하기 좋은': '适合学习',
-    '팀플하기 좋은': '适合团队项目',
-    '단체 모임하기 좋은': '适合团体聚会',
+    '韩国料理': '韩国料理',
+    '中国料理': '中国料理',
+    '日本料理': '日本料理',
+    '西餐': '西餐',
+    '亚洲料理': '亚洲料理',
+    '其他': '其他',
+    '咖啡厅': '咖啡厅',
+    '适合独自用餐': '适合独自用餐',
+    '可晚餐': '可晚餐',
+    '可早餐': '可早餐',
+    '可团体用餐': '可团体用餐',
+    '可团体打包/预约': '可团体打包/预约',
+    '性价比高': '性价比高',
+    '提供酒类': '提供酒类',
+    '周六营业': '周六营业',
+    '周日营业': '周日营业',
+    '适合学习': '适合学习',
+    '适合团队项目': '适合团队项目',
+    '适合团体聚会': '适合团体聚会',
+    '小吃可口': '小吃可口',
+    '韩式小吃': '韩式小吃',
     
     // 식당 이름
-    '맛있는 한식당': '美味韩国餐厅',
-    '카페 단맛': '甜味咖啡厅',
-    '중화요리집': '中华料理店',
-    '스시 명가': '寿司名家',
-    '카페 공부': '学习咖啡厅'
+    '美味韩国餐厅': '美味韩国餐厅',
+    '甜味咖啡厅': '甜味咖啡厅',
+    '中华料理店': '中华料理店',
+    '寿司名家': '寿司名家',
+    '学习咖啡厅': '学习咖啡厅'
   }
 };
 
@@ -277,7 +361,14 @@ async function fetchRestaurantData() {
         menu: restaurant.menu,
         address: restaurant.address,
         imageUrl: restaurant.imageUrl,
-        status: restaurant.status
+        status: restaurant.status,
+        // 다국어 번역 필드 추가
+        titleEn: restaurant.titleEn,
+        titleJa: restaurant.titleJa, 
+        titleZh: restaurant.titleZh,
+        menuEn: restaurant.menuEn,
+        menuJa: restaurant.menuJa,
+        menuZh: restaurant.menuZh
       };
     });
     
@@ -732,14 +823,35 @@ function displayRandomPlace(place) {
   // 가게 정보 HTML 생성
   const translatedName = translate(place.name);
   const translatedTags = place.tags.map(tag => translate(tag));
+  
+  // 메뉴 번역
+  let translatedMenu = place.menu;
+  if (place.menu && currentLang !== 'ko') {
+    switch(currentLang) {
+      case 'en':
+        translatedMenu = place.menuEn || place.menu;
+        break;
+      case 'ja':
+        translatedMenu = place.menuJa || place.menu;
+        break;
+      case 'zh':
+        translatedMenu = place.menuZh || place.menu;
+        break;
+    }
+  }
+  
   const categoryEmoji = 
     place.category === 'restaurant' ? '🍴' : 
     place.category === 'cafe' ? '☕' : '🍺';
+  
+  // 현재 표시된 가게 ID 저장
+  randomPlaceInfo.dataset.placeId = place.id;
   
   randomPlaceInfo.innerHTML = `
     <div style="text-align: center; margin-bottom: 15px;">
       <span style="font-size: 24px; margin-bottom: 10px; display: block;">${categoryEmoji}</span>
       <h3 style="font-size: 20px; color: var(--primary-color); margin-bottom: 10px;">${translatedName}</h3>
+      ${place.menu ? `<p style="margin-bottom: 8px; font-size: 14px;">🍽️ ${translatedMenu}</p>` : ''}
     </div>
     <div style="display: flex; flex-wrap: wrap; gap: 5px; justify-content: center;">
       ${translatedTags.map(tag => `<span style="background: var(--tag-bg); color: white; font-size: 12px; padding: 3px 8px; border-radius: 12px; display: inline-block;">${tag}</span>`).join('')}
@@ -898,10 +1010,16 @@ function changeLanguage(lang) {
   translatePageElements();
   
   // 태그 입력 필드의 placeholder 변경
-  document.getElementById('tags-input').placeholder = translate('태그 선택');
+  const tagsInput = document.getElementById('tags-input');
+  if (tagsInput) {
+    tagsInput.placeholder = translate('태그 선택');
+  }
   
   // 검색 입력 필드의 placeholder 변경
-  document.getElementById('autoComplete').placeholder = translate('식당이나 태그 검색...');
+  const autoCompleteInput = document.getElementById('autoComplete');
+  if (autoCompleteInput) {
+    autoCompleteInput.placeholder = translate('식당이나 태그 검색...');
+  }
   
   // Tagify 태그 업데이트
   updateTagifyTags();
@@ -911,15 +1029,153 @@ function changeLanguage(lang) {
   
   // 검색 데이터 업데이트
   updateSearchData();
+  
+  // allTags 번역 업데이트
+  updateTranslatedTags();
+  
+  // 랜덤 추천 모달 내용이 표시되어 있다면 업데이트
+  const randomModal = document.getElementById('random-modal');
+  if (randomModal && randomModal.classList.contains('active')) {
+    // 현재 표시된 식당 찾기
+    const randomPlaceInfo = document.getElementById('random-place-info');
+    if (randomPlaceInfo && randomPlaceInfo.dataset.placeId) {
+      const placeId = parseInt(randomPlaceInfo.dataset.placeId);
+      const place = restaurantData.find(p => p.id === placeId);
+      if (place) {
+        displayRandomPlace(place);
+      }
+    }
+  }
+}
+
+// allTags 번역 업데이트
+function updateTranslatedTags() {
+  // checkbox data-tag 속성 업데이트
+  const checkboxes = document.querySelectorAll('.filter-item input[type="checkbox"]');
+  checkboxes.forEach(checkbox => {
+    if (checkbox && checkbox.dataset.tag && currentLang !== 'ko') {
+      const originalTag = checkbox.dataset.originalTag || checkbox.dataset.tag;
+      
+      // 원본 태그 저장 (아직 저장되지 않은 경우)
+      if (!checkbox.dataset.originalTag) {
+        checkbox.dataset.originalTag = originalTag;
+      }
+      
+      // 번역된 태그로 data-tag 업데이트 (UI 표시용)
+      if (currentLang === 'ko') {
+        checkbox.dataset.tag = checkbox.dataset.originalTag;
+      } else {
+        const translatedTag = translate(originalTag);
+        checkbox.dataset.tag = translatedTag;
+      }
+    }
+  });
 }
 
 // 페이지 요소 번역
 function translatePageElements() {
+  // 안전하게 요소 선택해서 번역하는 헬퍼 함수
+  const safeTranslate = (selector, textKey) => {
+    const element = document.querySelector(selector);
+    if (element) {
+      element.textContent = translate(textKey);
+    }
+  };
+
   // 제목 번역
-  document.querySelector('.title').textContent = translate('단맛지도');
+  safeTranslate('.title', '단맛지도');
+  
+  // 카테고리 메뉴 텍스트 번역
+  safeTranslate('.category-toggle span', '카테고리 메뉴');
   
   // 필터 타이틀 번역
-  document.querySelector('.filter-title').textContent = translate('카테고리 필터:');
+  safeTranslate('.filter-title', '카테고리 필터:');
+
+  // 메인 카테고리 버튼 번역
+  const mainCategoryBtns = document.querySelectorAll('.main-category-btn');
+  mainCategoryBtns.forEach(btn => {
+    if (btn.dataset.category === 'restaurant') {
+      const span = btn.querySelector('span:not(.icon)') || btn;
+      if (span) span.textContent = translate('음식점');
+    } else if (btn.dataset.category === 'cafe') {
+      const span = btn.querySelector('span:not(.icon)') || btn;
+      if (span) span.textContent = translate('카페');
+    } else if (btn.dataset.category === 'bar') {
+      const span = btn.querySelector('span:not(.icon)') || btn;
+      if (span) span.textContent = translate('주점');
+    }
+  });
+
+  // 카테고리 메뉴 번역
+  const categoryParents = document.querySelectorAll('.category-parent');
+  categoryParents.forEach(parent => {
+    // 카테고리 아이콘 다음 텍스트 노드만 선택해서 번역
+    const textNode = Array.from(parent.childNodes).find(node => 
+      node.nodeType === Node.TEXT_NODE && node.textContent.trim()
+    );
+    
+    if (textNode) {
+      const originalText = textNode.textContent.trim();
+      if (originalText) {
+        // 원본 텍스트 보존을 위해 새 텍스트 노드 생성
+        const translatedNode = document.createTextNode(' ' + translate(originalText));
+        parent.replaceChild(translatedNode, textNode);
+      }
+    }
+  });
+
+  // 서브카테고리 번역
+  const subcategoryParents = document.querySelectorAll('.subcategory-parent');
+  subcategoryParents.forEach(parent => {
+    // 서브카테고리 아이콘 다음 텍스트 노드만 선택해서 번역
+    const textNode = Array.from(parent.childNodes).find(node => 
+      node.nodeType === Node.TEXT_NODE && node.textContent.trim()
+    );
+    
+    if (textNode) {
+      const originalText = textNode.textContent.trim();
+      if (originalText) {
+        // 원본 텍스트 보존을 위해 새 텍스트 노드 생성
+        const translatedNode = document.createTextNode(' ' + translate(originalText));
+        parent.replaceChild(translatedNode, textNode);
+      }
+    }
+  });
+
+  // 필터 아이템 라벨 번역
+  const filterLabels = document.querySelectorAll('.filter-item');
+  filterLabels.forEach(item => {
+    const checkbox = item.querySelector('input[type="checkbox"]');
+    if (checkbox && checkbox.dataset.tag) {
+      const originalTag = checkbox.dataset.tag;
+      const translatedTag = translate(originalTag);
+      
+      // 라벨 텍스트 노드 찾기
+      const textNode = Array.from(item.childNodes).find(node => 
+        node.nodeType === Node.TEXT_NODE
+      );
+      
+      if (textNode) {
+        // 새 텍스트 노드로 교체
+        const translatedNode = document.createTextNode(' ' + translatedTag);
+        item.replaceChild(translatedNode, textNode);
+      }
+    }
+  });
+
+  // 버튼 텍스트 번역
+  safeTranslate('#random-place-btn', '가게 추천');
+  safeTranslate('#show-all-btn', '모두 보기');
+  safeTranslate('#try-another-btn', '다른 가게 추천받기');
+  
+  // 모달 제목 번역
+  safeTranslate('.modal-content h2', '오늘의 추천 맛집');
+  
+  // 닫기 버튼 번역
+  safeTranslate('.close-btn', '닫기');
+  
+  // 열려있는 인포윈도우가 있다면 업데이트
+  updateOpenInfoWindows();
 }
 
 // 번역 함수
@@ -927,6 +1183,32 @@ function translate(text) {
   // 한국어인 경우 그대로 반환
   if (currentLang === 'ko') {
     return text;
+  }
+  
+  // 식당 이름인 경우 해당 식당의 번역된 제목 사용 
+  const restaurant = restaurantData.find(place => place.name === text);
+  if (restaurant) {
+    switch(currentLang) {
+      case 'en':
+        return restaurant.titleEn || text;
+      case 'ja':
+        return restaurant.titleJa || text;
+      case 'zh':
+        return restaurant.titleZh || text;
+    }
+  }
+  
+  // 메뉴인 경우 해당 식당의 번역된 메뉴 사용
+  const restaurantByMenu = restaurantData.find(place => place.menu === text);
+  if (restaurantByMenu) {
+    switch(currentLang) {
+      case 'en':
+        return restaurantByMenu.menuEn || text;
+      case 'ja':
+        return restaurantByMenu.menuJa || text;
+      case 'zh':
+        return restaurantByMenu.menuZh || text;
+    }
   }
   
   // 번역 데이터에서 해당 언어의 번역 찾기
@@ -1126,7 +1408,14 @@ async function filterRestaurants(selectedTags) {
                     menu: restaurant.menu,
                     address: restaurant.address,
                     imageUrl: restaurant.imageUrl,
-                    status: restaurant.status
+                    status: restaurant.status,
+                    // 다국어 번역 필드 추가
+                    titleEn: restaurant.titleEn,
+                    titleJa: restaurant.titleJa, 
+                    titleZh: restaurant.titleZh,
+                    menuEn: restaurant.menuEn,
+                    menuJa: restaurant.menuJa,
+                    menuZh: restaurant.menuZh
                   };
                   
                   addMarker(place);
@@ -1178,7 +1467,14 @@ async function filterRestaurants(selectedTags) {
             menu: restaurant.menu,
             address: restaurant.address,
             imageUrl: restaurant.imageUrl,
-            status: restaurant.status
+            status: restaurant.status,
+            // 다국어 번역 필드 추가
+            titleEn: restaurant.titleEn,
+            titleJa: restaurant.titleJa, 
+            titleZh: restaurant.titleZh,
+            menuEn: restaurant.menuEn,
+            menuJa: restaurant.menuJa,
+            menuZh: restaurant.menuZh
           };
           
           addMarker(place);
@@ -1247,6 +1543,22 @@ function addMarker(place) {
   const translatedName = translate(place.name);
   const translatedTags = place.tags.map(tag => translate(tag));
   
+  // 메뉴 번역
+  let translatedMenu = place.menu;
+  if (place.menu && currentLang !== 'ko') {
+    switch(currentLang) {
+      case 'en':
+        translatedMenu = place.menuEn || place.menu;
+        break;
+      case 'ja':
+        translatedMenu = place.menuJa || place.menu;
+        break;
+      case 'zh':
+        translatedMenu = place.menuZh || place.menu;
+        break;
+    }
+  }
+  
   // 이미지 URL 설정 (기본 이미지 또는 제공된 이미지)
   const imageUrl = place.imageUrl && place.imageUrl.trim() !== '' ? 
     place.imageUrl : 'image/default-restaurant.jpg';
@@ -1257,7 +1569,7 @@ function addMarker(place) {
         <img src="${imageUrl}" alt="${translatedName}" style="width: 100%; height: 120px; object-fit: cover; border-radius: 6px; margin-bottom: 8px;">
         <h3 style="margin: 0; font-size: 16px; color: #ff8a65; font-weight: 700;">${translatedName}</h3>
       </div>
-      <p style="margin-bottom: 8px; font-size: 14px;">🍽️ ${place.menu}</p>
+      <p style="margin-bottom: 8px; font-size: 14px;">🍽️ ${translatedMenu}</p>
       <p style="margin-bottom: 8px; font-size: 14px;">📍 ${place.address}</p>
       <div style="display: flex; flex-wrap: wrap; gap: 5px;">
         ${translatedTags.map(tag => `<span style="background: #ff8a65; color: white; font-size: 12px; padding: 3px 8px; border-radius: 12px; display: inline-block;">${tag}</span>`).join('')}
@@ -1407,4 +1719,71 @@ function showNotification(message) {
       console.log('알림 요소 제거됨');
     }
   }, 3000);
+}
+
+// 열려있는 인포윈도우 업데이트
+function updateOpenInfoWindows() {
+  // 열려있는 인포윈도우가 있는 마커 찾기
+  const openMarkers = markers.filter(marker => marker.isInfoWindowOpen);
+  
+  // 열려있는 인포윈도우가 있으면 새로운 내용으로 업데이트
+  openMarkers.forEach(marker => {
+    // 일단 닫기
+    marker.infoWindow.close();
+    marker.isInfoWindowOpen = false;
+    
+    // 해당 마커의 place 정보 찾기
+    const place = restaurantData.find(p => 
+      p.position.getLat() === marker.getPosition().getLat() && 
+      p.position.getLng() === marker.getPosition().getLng()
+    );
+    
+    if (place) {
+      // 새로운 인포윈도우 내용 생성
+      const translatedName = translate(place.name);
+      const translatedTags = place.tags.map(tag => translate(tag));
+      
+      // 메뉴 번역
+      let translatedMenu = place.menu;
+      if (place.menu && currentLang !== 'ko') {
+        switch(currentLang) {
+          case 'en':
+            translatedMenu = place.menuEn || place.menu;
+            break;
+          case 'ja':
+            translatedMenu = place.menuJa || place.menu;
+            break;
+          case 'zh':
+            translatedMenu = place.menuZh || place.menu;
+            break;
+        }
+      }
+      
+      // 이미지 URL 설정
+      const imageUrl = place.imageUrl && place.imageUrl.trim() !== '' ? 
+        place.imageUrl : 'image/default-restaurant.jpg';
+      
+      // 새 인포윈도우 내용
+      const content = `
+        <div class="info-window" style="padding: 12px; width: 220px; font-family: 'Orbit', sans-serif; border-radius: 10px; background-color: white; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+          <div style="text-align: center; margin-bottom: 10px;">
+            <img src="${imageUrl}" alt="${translatedName}" style="width: 100%; height: 120px; object-fit: cover; border-radius: 6px; margin-bottom: 8px;">
+            <h3 style="margin: 0; font-size: 16px; color: #ff8a65; font-weight: 700;">${translatedName}</h3>
+          </div>
+          <p style="margin-bottom: 8px; font-size: 14px;">🍽️ ${translatedMenu}</p>
+          <p style="margin-bottom: 8px; font-size: 14px;">📍 ${place.address}</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 5px;">
+            ${translatedTags.map(tag => `<span style="background: #ff8a65; color: white; font-size: 12px; padding: 3px 8px; border-radius: 12px; display: inline-block;">${tag}</span>`).join('')}
+          </div>
+        </div>
+      `;
+      
+      // 인포윈도우 내용 업데이트
+      marker.infoWindow.setContent(content);
+      
+      // 다시 열기
+      marker.infoWindow.open(map, marker);
+      marker.isInfoWindowOpen = true;
+    }
+  });
 }
