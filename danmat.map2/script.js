@@ -23,7 +23,7 @@ const translations = {
     '카페': 'Cafe',
     '주점': 'Bars',
     '전체보기': 'View All',
-    '랜덤추천': 'Random Recommendation',
+    '가게 추천': 'Store Recommendation',
     '태그 필터': 'Tag Filters',
     '태그로 찾기': 'Find by Tags',
     '식당': 'Restaurants',
@@ -71,7 +71,7 @@ const translations = {
     '카페': 'カフェ',
     '주점': '居酒屋',
     '전체보기': '全て見る',
-    '랜덤추천': 'ランダムおすすめ',
+    '가게 추천': 'お店のおすすめ',
     '태그 필터': 'タグフィルター',
     '태그로 찾기': 'タグで検索',
     '식당': 'レストラン',
@@ -119,7 +119,7 @@ const translations = {
     '카페': '咖啡厅',
     '주점': '酒吧',
     '전체보기': '查看全部',
-    '랜덤추천': '随机推荐',
+    '가게 추천': '店铺推荐',
     '태그 필터': '标签筛选',
     '태그로 찾기': '按标签查找',
     '식당': '餐厅',
@@ -1431,7 +1431,7 @@ function addMarker(place) {
       markerImageSrc = 'image/cafe.png';
       break;
     case 'bar':
-      markerImageSrc = 'image/cafe.png';
+      markerImageSrc = 'image/beer.png';
       break;
     case 'other':
       markerImageSrc = 'image/cafe.png';
